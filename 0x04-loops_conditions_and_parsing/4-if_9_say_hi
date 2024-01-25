@@ -4,11 +4,11 @@
 
 counter=1
 
-while [ $counter -lt 10 ];
+while [ $counter -lt 11 ];
 do
 echo "Best School"
 ((counter++))
-if [ $counter -eq 9 ];
+if [ $counter -eq 10 ];
 then
 echo "Hi"
 fi
