@@ -14,4 +14,7 @@ The second line of all your Bash scripts should be a comment explaining what is 
 </ol>
 
 <B>Tasks</B>
-* 0. Create a SSH RSA key pair 
+* 0. Create a SSH RSA key pair
+* 1. For Best School loop: Display Best SChool 10 times using For
+* 2. While Best School loop: Write a Bash script that displays Best School 10 times.
+* 3. Until Best School : Write a Bash script that displays Best School 10 times. 
