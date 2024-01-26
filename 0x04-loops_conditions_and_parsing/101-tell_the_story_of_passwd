@@ -1,19 +1,7 @@
 #!/usr/bin/env bash
-# Bash script to create a fictional story based on /etc/passwd
+#displays the content of the file /etc/passwd, using the while loop + IFS.
 
-# Read the /etc/passwd file line by line
-while IFS=: read -r username _ uid gid _ home shell; do
-  # Extract additional info about the user ID
-  user_info=$(grep -w "^$uid" /etc/passwd | awk -F: '{print $5}')
-
-  # Extract the group name from the /etc/group file
-  group_name=$(grep -w "^$gid" /etc/group | awk -F: '{print $1}')
-
-  Extract the password from the shadow file
-  password=$(grep -w "^$username" /etc/shadow | awk -F: '{print $2}')
-
-  echo "The user $username is part of the $group_name gang, lives in $home, and rides $shell."
-  echo "User ID $uid's place is protected by the passcode $password."
-  echo "More info about the user: $user_info"
-  echo
-done < /etc/passwdi
+while IFS=: read -r username password userid groupid comment homedir cmdshell
+do
+  echo "The user $username is part of the $groupid gang, lives in $homedir and rides $cmdshell. $userid's place is protected by the passcode $password, more info about the user here: $comment"
+done < "/etc/passwd"
