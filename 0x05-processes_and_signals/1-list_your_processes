@@ -1,9 +1,4 @@
 #!/usr/bin/env bash
 #This script displays list of current running processes
 
-# Display the process list with header
-ps -ef --forest --cols=100
-
-# Display the total number of processes
-total_processes=$(ps -ef | wc -l)
-echo "$((total_processes - 1))"
+ps -auxf
