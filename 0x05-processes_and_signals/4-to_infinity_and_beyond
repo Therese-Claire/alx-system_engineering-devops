@@ -3,6 +3,6 @@
 #and sleep 2 is added in between each iteration.
 
 while true; do
-	echo "To infinity and beyong"
+	echo "To infinity and beyond"
 	sleep 2
 done
