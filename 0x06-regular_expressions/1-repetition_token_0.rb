@@ -1,2 +1,5 @@
 #!/usr/bin/env ruby
-puts ARGV[0].scan(/w/).join
+#This script accepts one argument and passes it to a regular expression
+#marching method
+
+puts ARGV[0].scan(/hbt{2,5}n/).join
