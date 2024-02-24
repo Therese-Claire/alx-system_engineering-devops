@@ -1,10 +1,10 @@
-**0x09. Web infrastructure design
+**0x09. Web infrastructure design**
 
-Project to be done in teams of 3 people (your team: Darius Tohtin, Agabi Therese-Claire Awongu)
+**Project to be done in teams of 3 people (your team: Darius Tohtin, Agabi Therese-Claire Awongu)**
 
-Requirements
+**Requirements**
 
-General**
+**General**
 * A README.md file, at the root of the folder of the project, is mandatory
 * For each task, once you are done whiteboarding (on a whiteboard, piece of paper or software or your choice), take a picture/screenshot of your diagram
 * This project will be manually reviewed:
