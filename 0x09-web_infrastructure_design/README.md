@@ -1,10 +1,10 @@
-**0x09. Web infrastructure design
+**0x09. Web infrastructure design**
 
-Project to be done in teams of 3 people (your team: Darius Tohtin, Agabi Therese-Claire Awongu)
+**Project to be done in teams of 3 people (your team: Darius Tohtin, Agabi Therese-Claire Awongu)**
 
-Requirements
+**Requirements**
 
-General**
+**General**
 * A README.md file, at the root of the folder of the project, is mandatory
 * For each task, once you are done whiteboarding (on a whiteboard, piece of paper or software or your choice), take a picture/screenshot of your diagram
 * This project will be manually reviewed:
@@ -17,4 +17,4 @@ General**
 * Cover what the requirements mention, we will explore details in a later project
 * Keep in mind that you will have 30 minutes to perform the exercise, you will get points for what is asked in requirements
 * Similarly in a job interview, you should answer what the interviewer asked for, be careful about being too verbose - always ask the interviewer if going into details is necessary - speaking too much can play against you
-* In this project, again, avoid going in details if not asked.
+* In this project, again, avoid going in details if not asked..
