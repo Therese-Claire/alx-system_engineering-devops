@@ -1,7 +1,9 @@
 **0x0C. Web server**
+
 ![](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/266/8Gu52Qv.png)
 
 **Tasks**
+
 0. Transfer a file to your server
 Write a Bash script that transfers a file from our client to a server:
 
