@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Fix issue so so when i curl 0:8080 which is mapped to my docker container it returns Hello Holberton
-
-echo 'Hello Holberton' > /var/www/html/index.html
+# Script that returns the required page mapped to port 8080
+echo "Hello Holberton" > /var/www/html/index.html
 service apache2 restart
