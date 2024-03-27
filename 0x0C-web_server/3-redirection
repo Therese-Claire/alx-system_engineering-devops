@@ -1,28 +1,37 @@
 #!/usr/bin/env bash
-# install nginx
 
+# Install nginx
 sudo apt-get update
 sudo apt-get install -y nginx
 
+# Allow Nginx through the firewall
 sudo ufw allow 'Nginx HTTP'
+
+# Create the index.html file with "Hello World!"
 echo "Hello World!" | sudo tee /var/www/html/index.html
 
-echo "server {
+# Configure Nginx
+sudo tee /etc/nginx/sites-available/default > /dev/null <<EOF
+server {
     listen 80 default_server;
     listen [::]:80 default_server;
     root /var/www/html;
     index index.html index.htm index.nginx-debian.html;
     server_name _;
+
     location / {
         try_files \$uri \$uri/ =404;
     }
+
     location /redirect_me {
         rewrite ^ https://github.com/Therese-Claire permanent;
     }
-}" | sudo tee /etc/nginx/sites-available/default
+}
+EOF
 
-if [ "$(pgrep -c nginx)" -le 0 ]; then
-	sudo service nginx start
+# Start or reload Nginx
+if [ -z "$(pgrep nginx)" ]; then
+    sudo service nginx start
 else
-	sudo nginx -s reload
+    sudo service nginx reload
 fi
