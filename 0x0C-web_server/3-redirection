@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# script to install and setup nginx
+apt-get -y update
+apt-get -y install nginx
+
+cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
+
+sed -i '/server_name _;/a \\trewrite ^/redirect_me$ https://github.com/Therese-Claire permanent;' /etc/nginx/sites-available/default
+
+nginx -s reload
