@@ -1,10 +1,27 @@
 #!/usr/bin/env bash
-# script to install and setup nginx
+# Installs Nginx
+
 apt-get -y update
+apt-get -y upgrade
 apt-get -y install nginx
+echo "Hello World!" | sudo tee /var/www/html/index.html
 
-cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
+echo "server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    root /var/www/html;
+    index index.html index.htm index.nginx-debian.html;
+    server_name _;
+    location / {
+        try_files \$uri \$uri/ =404;
+    }
+    location /redirect_me {
+        rewrite ^ https://github.com/Therese-Claire permanent;
+    }
+}" | sudo tee /etc/nginx/sites-available/default
 
-sed -i '/server_name _;/a \\trewrite ^/redirect_me$ https://github.com/Therese-Claire permanent;' /etc/nginx/sites-available/default
-
-nginx -s reload
+if [ "$(pgrep -c nginx)" -le 0 ]; then
+	sudo service nginx start
+else
+	sudo nginx -s reload
+fi
