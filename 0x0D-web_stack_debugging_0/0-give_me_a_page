@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
-#start apache inside docker
-service apache2 start
+# Fix issue so so when i curl 0:8080 which is mapped to my docker container it returns Hello Holberton
+
+echo 'Hello Holberton' > /var/www/html/index.html
+service apache2 restart
