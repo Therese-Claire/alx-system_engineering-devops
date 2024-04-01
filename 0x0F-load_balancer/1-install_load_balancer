@@ -13,7 +13,7 @@ frontend my_frontend
 	stats enable
         stats uri /haproxy?stats
         option forwardfor
-	default_backend hbnb_backend
+	default_backend my_backend
 
 backend my_backend
 	mode http
