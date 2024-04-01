@@ -27,6 +27,7 @@ frontend my_frontend
 backend my_backend
     mode http
     balance roundrobin
+    option http-server-close
     server 526174-web-01 54.236.26.138:80 check
     server 526174-web-02 3.84.158.55:80 check
     timeout client 30s
