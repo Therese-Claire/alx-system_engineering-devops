@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# shellcheck disable=SC2086
 # script that will display information about subdomains
+# shellcheck disable=SC2086
 
 domain_info () {
     line=$(dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | tr '\t' '\n' | tail -2 | tr '\n' ' ')
