@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# shellcheck disable=SC2086
 # script that will display information about subdomains
 
 domain_info () {
